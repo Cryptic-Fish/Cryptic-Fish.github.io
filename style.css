@@ -85,4 +85,8 @@ footer {
     background: #72e3ff;
     box-shadow: 0 0 10px #4cc9f0;
 }
+nav a.active {
+    color: #4cc9f0;
+    text-decoration: underline;
+}
 
