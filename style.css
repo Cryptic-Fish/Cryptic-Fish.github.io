@@ -69,3 +69,20 @@ footer {
     border-top: 2px solid #1f1f1f;
     margin-top: 40px;
 }
+.resume-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 20px;
+    background: #4cc9f0;
+    color: #0d0d0d;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: #72e3ff;
+    box-shadow: 0 0 10px #4cc9f0;
+}
+
