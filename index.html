@@ -410,6 +410,505 @@
         <div class="project-name">Portainer · MariaDB · Ollama</div>
         <div class="project-desc">Deployed Portainer for container management, integrated MariaDB, and ran Ollama for local LLM workloads.</div>
       </div>
+      <div class="project-card">
+        <div class="project-icon">🗄️</div>
+        <div class="project-name">Samba NAS — Raspberry Pi 5</div>
+        <div class="project-desc">Configured a Samba file server on a Raspberry Pi 5 to provide centralized network-attached storage and shared access across local devices.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <p class="section-label">Certifications</p>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="cert-name">ISC2 Certified in Cybersecurity (CC)</div>
+        <div class="cert-year">✓ 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">TestOut Security Pro</div>
+        <div class="cert-year">✓ 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">TestOut PC Pro</div>
+        <div class="cert-year">✓ 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">SKYCTC — A+ Prep</div>
+        <div class="cert-year">✓ SKYCTC</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">SKYCTC — Security+ Prep</div>
+        <div class="cert-year">✓ SKYCTC</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">SKYCTC — Computer Technician</div>
+        <div class="cert-year">✓ SKYCTC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:gmertens2020@gmail.com">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">gmertens2020@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-link" href="tel:+12704068545">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">(270) 406-8545</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/gregory-mertens-05b5a0211" target="_blank" rel="noopener">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">gregory-mertens-05b5a0211 ↗</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Gregory Mertens</footer>
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gregory Mertens | IT & Cybersecurity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c2330;
+    --border: #30363d;
+    --border-accent: #58a6ff;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #484f58;
+    --accent: #58a6ff;
+    --accent-dim: #1f3d5c;
+    --green: #3fb950;
+    --green-dim: #1a3a24;
+    --amber: #d29922;
+    --amber-dim: #3d2e0a;
+    --font: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --radius: 8px;
+    --radius-lg: 12px;
+  }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 0; }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 0 14px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
+  .nav-links a.active { color: var(--text-primary); border-bottom-color: var(--accent); }
+
+  /* LAYOUT */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  /* HERO */
+  .hero { padding-bottom: 4rem; border-bottom: 1px solid var(--border); }
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #0d1117;
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover { background: #79beff; border-color: #79beff; text-decoration: none; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { background: var(--bg-card); color: var(--text-primary); border-color: var(--text-muted); text-decoration: none; }
+
+  /* SKILLS STRIP */
+  .skills-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2.5rem;
+  }
+  .skill-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    background: var(--bg-card);
+  }
+
+  /* SECTION */
+  section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* EXPERIENCE CARDS */
+  .exp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 12px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .exp-card:hover { border-color: var(--text-muted); background: var(--bg-card-hover); }
+  .exp-card:last-child { margin-bottom: 0; }
+  .exp-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .exp-role { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .exp-org { font-size: 13px; color: var(--accent); margin-top: 3px; }
+  .exp-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* PROJECT CARDS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .project-card:hover { border-color: var(--text-muted); background: var(--bg-card-hover); }
+  .project-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .project-name { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .project-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+
+  /* CERT LIST */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+  }
+  .cert-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    transition: border-color 0.15s;
+  }
+  .cert-item:hover { border-color: var(--text-muted); }
+  .cert-name { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+  .cert-year {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--green);
+    margin-top: 4px;
+  }
+
+  /* CONTACT */
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .contact-link:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .contact-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .contact-value { font-size: 14px; color: var(--text-primary); margin-top: 1px; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    main { padding: 2.5rem 1.25rem 4rem; }
+    .nav-links a { padding: 0 10px; }
+    .exp-header { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">gm<span>.</span>dev</span>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero" style="border-bottom: 1px solid var(--border); padding-top: 2rem;">
+    <p class="hero-tag">IT & Cybersecurity</p>
+    <h1>Gregory Mertens</h1>
+    <p class="hero-sub">Information Security &amp; Network Administration student. Hands-on with networking, system diagnostics, and security hardening.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="Gregory_Mertens_Resume.pdf" download>↓ Download résumé</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch →</a>
+    </div>
+    <div class="skills-strip">
+      <span class="skill-tag">Windows AD</span>
+      <span class="skill-tag">Networking</span>
+      <span class="skill-tag">Security</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">DNS / Firewall</span>
+      <span class="skill-tag">VPN</span>
+      <span class="skill-tag">Hardware Repair</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Experience</p>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">IT Intern</div>
+          <div class="exp-org">SKYCTC Information Technology Dept</div>
+        </div>
+        <span class="exp-date">2026 – Present</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Supported students, faculty, and staff with Windows troubleshooting and account issues.</li>
+        <li>Imaged, configured, and deployed campus computers.</li>
+        <li>Performed hardware diagnostics, repairs, and system updates.</li>
+        <li>Managed Active Directory accounts, permissions, and password resets.</li>
+        <li>Documented tickets and asset changes.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Tech Support Agent</div>
+          <div class="exp-org">Microsoft Xbox Division</div>
+        </div>
+        <span class="exp-date">2017 – 2018</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Resolved system errors, account recovery issues, and connectivity problems.</li>
+        <li>Delivered troubleshooting support via voice and chat.</li>
+        <li>Logged and tracked service tickets using CRM tools.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">🔒</div>
+        <div class="project-name">Home VPN — Raspberry Pi</div>
+        <div class="project-desc">Configured a secure VPN using PiVPN to enable encrypted remote access to home network resources.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🛡️</div>
+        <div class="project-name">Pihole + Firewall</div>
+        <div class="project-desc">Implemented Pihole for DNS-level ad and tracker filtering with custom firewall rules to harden the network.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🐳</div>
+        <div class="project-name">Portainer · MariaDB · Ollama</div>
+        <div class="project-desc">Deployed Portainer for container management, integrated MariaDB, and ran Ollama for local LLM workloads.</div>
+      </div>
     </div>
   </section>
 
