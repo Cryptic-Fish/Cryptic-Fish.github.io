@@ -90,3 +90,7 @@ nav a.active {
     text-decoration: underline;
 }
 
+.resume-container {
+    display: flex;
+    justify-content: center;
+}
